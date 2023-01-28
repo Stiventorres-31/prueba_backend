@@ -52,7 +52,7 @@ def registrar_usuarios():
             cursor.execute(sql)
             conexion.connection.commit()  # CONFIRMA LA INSERCION
             lastId = cursor.lastrowid
-            return jsonify({"mensaje": "registrado: "+str(lastId)}),200
+            return jsonify({"mensaje": "Usuario registrado","id_usuario_registrado":lastId}),200
         except Exception as ex:
             print(ex)
             error = {"mensaje": "Error al registrar usuario, verifique los datos"}
