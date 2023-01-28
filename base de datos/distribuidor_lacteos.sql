@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-01-2023 a las 03:57:05
+-- Tiempo de generación: 28-01-2023 a las 04:57:14
 -- Versión del servidor: 10.4.27-MariaDB
 -- Versión de PHP: 8.2.0
 
@@ -99,7 +99,8 @@ INSERT INTO `establecimientos` (`id_establecimiento`, `codigo_establecimiento`, 
 (102, 'a046', 'Minimercados'),
 (104, 'a048', 'Minimercados'),
 (105, 'arr01', 'tienda'),
-(106, 'arr02', 'tienda');
+(106, 'arr02', 'tienda'),
+(109, 'Sup3', 'Supermercados');
 
 -- --------------------------------------------------------
 
@@ -120,7 +121,8 @@ CREATE TABLE `portafolios` (
 INSERT INTO `portafolios` (`id_portafolio`, `codigo_portafolio`, `nombre_portafolio`) VALUES
 (1, 'Bar01', 'Sueros'),
 (2, 'Barr01', 'Lacteoss'),
-(4, 'Barr02', 'Lacteos');
+(4, 'Barr02', 'Lacteos'),
+(5, 'Lac1', 'Lacteos');
 
 -- --------------------------------------------------------
 
@@ -159,7 +161,8 @@ INSERT INTO `productos` (`id_producto`, `codigo_producto`, `nombre_producto`, `i
 (24, 'b07', 'suer1', 1, 1, 1),
 (25, 'b08', 'suer1', 1, 1, 1),
 (26, 'b09', 'suer1', 1, 1, 1),
-(27, 'b10', 'suer1', 106, 4, 1);
+(27, 'b10', 'suer1', 106, 4, 1),
+(29, 'b11', 'suer1', 109, 5, 1);
 
 -- --------------------------------------------------------
 
@@ -182,7 +185,9 @@ INSERT INTO `usuarios` (`id_usuario`, `nombre_usuario`, `usuario`, `pass`) VALUE
 (1, 'stiven torres', 's3120', '1234'),
 (2, 'Jeol', 'J2424', '123'),
 (3, 'Jeol', 'Js2424', '123'),
-(5, 'Jeol', 'Js24241', '123');
+(5, 'Jeol', 'Js24241', '123'),
+(8, 'Chadia Orozco', 'co2424', '123'),
+(9, 'Chadia Orozco', 'CO2431', '123');
 
 --
 -- Índices para tablas volcadas
@@ -227,25 +232,25 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `establecimientos`
 --
 ALTER TABLE `establecimientos`
-  MODIFY `id_establecimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `id_establecimiento` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=110;
 
 --
 -- AUTO_INCREMENT de la tabla `portafolios`
 --
 ALTER TABLE `portafolios`
-  MODIFY `id_portafolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_portafolio` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
 --
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Restricciones para tablas volcadas
